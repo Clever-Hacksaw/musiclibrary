@@ -1,3 +1,41 @@
 body {
-    background-color:orange;
+    background-color: #eee;
+    padding-top: 70px;
+    padding-bottom: 70px;
+
 }
+
+.navbar-header {
+    min-width: 425px;
+}
+
+.jumbotron {
+    margin-top: 0;
+    background: url('main-banner.jpg');
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    color: #fff;
+    text-shadow: 0px 4px 10px #111;
+}
+
+.jumbotron h1, .jumbotron p {
+    padding: 15px;
+    white-space: nowrap;
+}
+
+.page-footer {
+    position: fixed;
+    bottom: 0;
+    padding: 10px;
+    background-color: #000;
+    color: #999;
+    font-size:10pt;
+    text-align:center;
+    width:100%;
+}
+
+/*
+Original reference to banner image, for good measure.
+https://pixabay.com/en/party-people-rave-people-music-dj-1644798/
+*/
+
