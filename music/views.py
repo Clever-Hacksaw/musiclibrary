@@ -1,6 +1,7 @@
 from django.shortcuts import render, get_object_or_404
 from django.db.models import Count
 from django.core.urlresolvers import reverse
+from django.views.generic import ListView, DetailView
 # NOTE: Remove any above we don't use.
 
 # Import the music app models.
@@ -11,35 +12,35 @@ def index(request):
 
 # Artist data views.
 
-def artist_list():
-    pass
+class ArtistList(ListView):
+    model = Artist
 
-def artist_detail():
-    pass
+class ArtistDetail(DetailView):
+    model = Artist
 
 # Album data views.
 
-def album_list():
-    pass
+class AlbumList(ListView):
+    model = Album
 
-def album_detail():
-    pass
+class AlbumDetail(DetailView):
+    model = Album
 
 # Track data views.
 
-def track_list():
-    pass
+class TrackList(ListView):
+    model = Track
 
-def track_detail():
-    pass
+class TrackDetail(DetailView):
+    model = Track
 
 # Genre data views.
 
-def genre_list():
-    pass
+class GenreList(ListView):
+    model = Genre
 
-def genre_detail():
-    pass
+class GenreDetail(DetailView):
+    model = Genre
 
 
 # Reference from bookworm.
