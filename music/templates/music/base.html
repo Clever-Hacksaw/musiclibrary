@@ -31,10 +31,10 @@
             <div class="container">
                 <div class="navbar-header">
                     <a href="{% url 'music:index' %}" class="navbar-brand">Home</a>
-                    <a href="#" class="navbar-brand">Albums</a>
-                    <a href="#" class="navbar-brand">Artists</a>
-                    <a href="#" class="navbar-brand">Tracks</a>
-                    <a href="#" class="navbar-brand">Genre</a>
+                    <a href="{% url 'music:artist_list' %}" class="navbar-brand">Artists</a>
+                    <a href="{% url 'music:album_list' %}" class="navbar-brand">Albums</a>
+                    <a href="{% url 'music:track_list' %}" class="navbar-brand">Tracks</a>
+                    <a href="{% url 'music:genre_list' %}" class="navbar-brand">Genre</a>
                 </div>
             </div>
        </nav>
