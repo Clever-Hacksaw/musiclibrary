@@ -1,0 +1,14 @@
+{% extends "music/base.html" %}
+
+{% block content %}
+
+<tbody>
+{% for genre in object_list %}
+    <td>
+    {{ genre.name }}
+    </td>
+        
+{% endfor %}
+</tbody>
+
+{% endblock content %}

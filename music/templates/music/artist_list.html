@@ -1,0 +1,15 @@
+{% extends "music/base.html" %}
+
+{% block content %}
+
+<h1>Artists</h1>
+
+<tbody>
+{% for artist in object_list %}
+    <td>
+    <a href="{{ artist.get_absolute_url }}">{{ artist.name }}</td>
+    <td>{{ artist.description }}</td>
+{% endfor %}
+</tbody>
+
+{% endblock content %}

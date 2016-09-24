@@ -1,0 +1,26 @@
+{% extends "music/base.html" %}
+
+{% block content %}
+
+<h1>Albums</h1>
+    
+<tbody>
+{% for album in object_list %}
+    <td>
+    <a href="{{ album.get_absolute_url }}">
+        {{ album.name }}
+    </td>
+    <td>
+    {% for artist in album.artist.all %}
+        {{ artist.name }}
+    {% endfor %}
+    </td>
+    <td>
+    {% for genre in album.genre.all %}
+        {{ genre.name }} 
+    {% endfor %}
+    </td>
+{% endfor %}
+</tbody>
+
+{% endblock content %}
