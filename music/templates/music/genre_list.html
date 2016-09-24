@@ -2,9 +2,13 @@
 
 {% block content %}
 
-<h1>Genres</h1>
-  
-        <p>Test</p>
-
+<tbody>
+{% for genre in object_list %}
+    <td>
+    {{ genre.name }}
+    </td>
+        
+{% endfor %}
+</tbody>
 
 {% endblock content %}
