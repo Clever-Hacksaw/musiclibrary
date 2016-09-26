@@ -1,0 +1,31 @@
+{% extends "music/base.html" %}
+
+{% block title %}
+  {{ block.super }} | {{ block.name }}
+{% endblock %}
+
+{% block content %}
+
+<div class="main-content">
+
+    <div class="row">
+        <h2 class="text-center">
+            {{ object.name }} by
+            {% for artist in object.artist.all %}
+                {{ artist.name }}
+            {% endfor %}
+        </h2>
+    </div>
+
+    <div class="col-md-6 col-md-offset-3">
+        <ul class="list-group">
+            {% for track in object.track_set.all %}
+              <li class="list-group-item">
+                  {{ track.name }}
+              </li>
+            {% endfor %}
+        </ul>
+    </div>
+</div>
+
+{% endblock %}
