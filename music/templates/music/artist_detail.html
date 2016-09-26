@@ -1,0 +1,31 @@
+{% extends "music/base.html" %}
+
+{% block title %}
+  {{ block.super }} | {{ block.name }}
+{% endblock %}
+
+{% block content %}
+
+<div class="main-content">
+
+    <div class="row">
+        <h2 class="text-center">
+            {{ object.name }}
+        </h2>
+        <p class="text-center">{{object.name}} plays on the following albums.</p>
+    </div>
+
+    <div class="col-md-6 col-md-offset-3">
+        <ul class="list-group">
+            {% for album in object.album_set.all %}
+              <li class="list-group-item">
+                  <a href="{{ album.get_absolute_url }}">
+                      {{ album.name }}
+                  </a>
+              </li>
+            {% endfor %}
+        </ul>
+    </div>
+</div>
+
+{% endblock %}

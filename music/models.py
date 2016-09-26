@@ -10,6 +10,9 @@ class Artist(models.Model):
     def __str__(self):
         return self.name
 
+    def get_absolute_url(self):
+        return reverse('music:artist_detail', kwargs={'pk': self.pk})
+
 
 class Genre(models.Model):
     name = models.CharField(max_length=20)
