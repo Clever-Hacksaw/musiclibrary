@@ -14,7 +14,5 @@ urlpatterns = [
     url(r'^track-list/$', views.TrackList.as_view(), name="track_list"),
     url(r'^(?P<pk>\d+)/track-detail/$', views.TrackDetail.as_view(), name="track_detail"),
 
-    url(r'^genre-list/$', views.AlbumList.as_view(), name="genre_list"),
-    url(r'^(?P<pk>\d+)/genre-detail/$', views.GenreDetail.as_view(), name="genre_detail"),
 ]
 
