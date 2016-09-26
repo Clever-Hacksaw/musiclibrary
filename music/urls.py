@@ -13,6 +13,5 @@ urlpatterns = [
 
     url(r'^track-list/$', views.TrackList.as_view(), name="track_list"),
     url(r'^(?P<pk>\d+)/track-detail/$', views.TrackDetail.as_view(), name="track_detail"),
-
 ]
 
