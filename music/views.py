@@ -2,6 +2,7 @@ from django.shortcuts import render, get_object_or_404
 from django.db.models import Count
 from django.core.urlresolvers import reverse
 from django.views.generic import ListView, DetailView
+from django.views.generic.edit import CreateView
 # NOTE: Remove any above we don't use.
 
 # Import the music app models.
@@ -17,6 +18,11 @@ class ArtistList(ListView):
 
 class ArtistDetail(DetailView):
     model = Artist
+
+class ArtistCreate(CreateView):
+    model = Artist
+    fields = ('name', 'description', )
+    template_name = "music/index.html"
 
 # Album data views.
 

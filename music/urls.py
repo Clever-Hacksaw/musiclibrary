@@ -3,7 +3,7 @@ from django.conf.urls import url
 from . import views
 
 urlpatterns = [
-    url(r'^$', views.index, name="index"),
+    url(r'^$', views.ArtistCreate.as_view(), name="index"),
 
     url(r'^artist-list/$', views.ArtistList.as_view(), name="artist_list"),
     url(r'^(?P<pk>\d+)/artist-detail/$', views.ArtistDetail.as_view(), name="artist_detail"),
